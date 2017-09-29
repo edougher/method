@@ -6,37 +6,36 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        //int choice = 0;
         menu();
-        int choice = 0;
-        choice = in.nextInt();
+        int choice = in.nextInt();
         switch1(choice);
     }
 
-    static int menu() {
+    public static void menu() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Chose which shape you would like to find the area for.");
+        System.out.println("Choose which shape you would like to find the area for.");
         System.out.println("");
-        System.out.println(1);
-        System.out.println(2);
-        System.out.println(3);
-        System.out.println(4);
-        int choice;
-        choice = in.nextInt();
-return(choice);
-
-
+        System.out.println("1:  Triangle");
+        System.out.println("2:  Rectangle");
+        System.out.println("3:  Trapezoid");
+        System.out.println("4:  Ellipse");
     }
 
     public static void switch1(int choice) {
         switch (choice) {
             case 1:
                 triangle();
+                break;
             case 2:
                 rectangle();
+                break;
             case 3:
                 trapezoid();
+                break;
             case 4:
                 ellipse();
+                break;
             default:
                 System.out.println("Please try again");
         }
